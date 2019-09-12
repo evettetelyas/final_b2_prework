@@ -13,10 +13,10 @@ RSpec.describe Course, type: :model do
     describe "model methods" do
         before :each do
             @pugs_101 = Course.create(name: "Pugs 101")
-            @larry = Student.create(name: "Larry")
             @evette = Student.create(name: "Evette")
-            StudentCourse.create(student: @larry, course: @pugs_101, grade: 100)
+            @larry = Student.create(name: "Larry")
             StudentCourse.create(student: @evette, course: @pugs_101, grade: 99.98)
+            StudentCourse.create(student: @larry, course: @pugs_101, grade: 100)
         end
 
         it "should sort students by grade" do
