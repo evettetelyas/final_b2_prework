@@ -1,0 +1,64 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/evettetelyas/turing/2module/independent_challenges/final_b2_prework/app/models/course.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/evettetelyas/turing/2module/independent_challenges/final_b2_prework/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/evettetelyas/turing/2module/independent_challenges/final_b2_prework/spec/models/student_course_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/evettetelyas/turing/2module/independent_challenges/final_b2_prework/app/models/student_course.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/evettetelyas/turing/2module/independent_challenges/final_b2_prework/spec/models/student_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        2,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/evettetelyas/turing/2module/independent_challenges/final_b2_prework/app/models/student.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1568318854
+  }
+}

@@ -1,0 +1,8 @@
+<h1><%= @course.name %></h1>
+
+<h2>Students:</h2>
+<% @sorted_students.each do |student| %>
+    <section id="student-#{student.id}">
+        <li><b><%= student.name %></b> | Grade: <%= student.find_grade(@course.id) %></li>
+    </section>
+<% end %>
