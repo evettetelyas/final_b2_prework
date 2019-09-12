@@ -19,10 +19,6 @@ RSpec.describe Course, type: :model do
             StudentCourse.create(student: @evette, course: @pugs_101, grade: 99.98)
         end
 
-        it "should find student grade" do
-            expect(@pugs_101.find_student_grade(@evette)).to eq(99.98)
-        end
-
         it "should sort students by grade" do
             expect(@pugs_101.sort_students_by_grade).to eq([@larry, @evette])
         end

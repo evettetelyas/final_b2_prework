@@ -4,11 +4,6 @@ class Course < ApplicationRecord
     has_many :student_courses
     has_many :students, through: :student_courses
 
-    def find_student_grade(student_id)
-        student_courses.find_by(student_id: student_id, course_id: self.id)
-        .grade
-    end
-
     def sort_students_by_grade
         students.where("student_courses.course_id = #{self.id}")
         .order("student_courses.grade desc")

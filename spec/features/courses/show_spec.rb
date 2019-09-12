@@ -13,7 +13,7 @@ RSpec.describe "course show page" do
         expect(page).to have_content(@pugs_101.name)
         expect(page).to have_content(@evette.name)
         expect(page).to have_content(@larry.name)
-        expect(page).to have_content(@larry.find_grade(@pugs_101))
-        expect(page).to have_content(@evette.find_grade(@pugs_101))
+        expect(page).to have_content(@larry.find_grade(@pugs_101).round(2))
+        expect(page).to have_content(@evette.find_grade(@pugs_101).round(2))
     end
 end
