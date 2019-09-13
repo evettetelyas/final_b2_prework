@@ -15,12 +15,16 @@ RSpec.describe Course, type: :model do
             @pugs_101 = Course.create(name: "Pugs 101")
             @evette = Student.create(name: "Evette")
             @larry = Student.create(name: "Larry")
-            StudentCourse.create(student: @evette, course: @pugs_101, grade: 99.98)
-            StudentCourse.create(student: @larry, course: @pugs_101, grade: 100)
+            @sc1 = StudentCourse.create(student: @evette, course: @pugs_101, grade: 99.98)
+            @sc2 = StudentCourse.create(student: @larry, course: @pugs_101, grade: 100)
         end
 
         it "should sort students by grade" do
             expect(@pugs_101.sort_students_by_grade).to eq([@larry, @evette])
+        end
+
+        it "returns a student course obj when given a student" do
+            expect(@pugs_101.find_student_course(@evette)).to eq(@sc1)
         end
     end
 end
