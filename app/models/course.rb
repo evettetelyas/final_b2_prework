@@ -10,6 +10,11 @@ class Course < ApplicationRecord
     end
 
 
+    def find_student_course(student)
+        student_courses.find_by(student: student)
+    end
+
+
     
     # USEFUL SQL
 

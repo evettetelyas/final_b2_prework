@@ -3,6 +3,15 @@
 <h2>Students:</h2>
 <% @sorted_students.each do |student| %>
     <section id="student-#{student.id}">
-        <li><b><%= student.name %></b> | Grade: <%= student.find_grade(@course.id).round(2) %></li>
+        <li><b><%= link_to "#{student.name}", student_path(student) %></b> | Grade: <%= student.find_grade(@course.id).round(2) %></li>
     </section>
+<% end %>
+
+<br><br>
+
+<h2>Add Student:</h2>
+<%= form_for [@course, @student], url: course_students_path(@course,@student), method: :post do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.submit %>
 <% end %>
