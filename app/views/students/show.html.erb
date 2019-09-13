@@ -6,7 +6,7 @@
         <%= form_for [course.find_student_course(@student)], url: student_course_path(course.find_student_course(@student)), method: :patch do |f| %>
         <%= f.label :grade %>
         <%= f.text_field :grade %>
-        <%= f.submit %>
+        <%= f.submit "Update Grade" %>
         <% end %>
     </section>
 <% end %>
