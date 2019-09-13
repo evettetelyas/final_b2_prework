@@ -9,6 +9,8 @@ class Course < ApplicationRecord
         .order("student_courses.grade desc")
     end
 
+
+    
     # USEFUL SQL
 
 #student name, grade, course table ordered highest to lowest grade
